@@ -1,6 +1,7 @@
 <h1>Here are the students</h1>
 <% @students.each do |student| %>
-  <div>
+  <div class="student">
+  	<p><%= image_tag student.avatar.url(:medium), class: "img_preview" %></p>
     <%= link_to student.name, student %> - <%= student.house.name %>
-<% end %>
   </div>
+<% end %>
